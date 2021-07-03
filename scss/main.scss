@@ -207,6 +207,19 @@ textarea {
       width: 250px;
       margin-left: 90px;
       margin-top: 50px;
+      ul li {
+        display: flex;
+        &:before {
+          content: "";
+          display: inline-block;
+          height: 20px;
+          width: 20px;
+          background: url("../img/arrow-right.svg");
+          background-repeat: no-repeat;
+          background-position: center center;
+          margin-top: -3px;
+        }
+      }
       .primary {
         ul {
           list-style: none;
@@ -658,9 +671,9 @@ textarea {
           bottom: 20px;
           left: 0;
           padding: 0 20px 20px 20px;
-          font-family: sans-serif;
+          font-family: $roboto-condensed;
           font-weight: normal;
-          font-size: 16px;
+          font-size: 24px;
           z-index: 1;
         }
         span {
