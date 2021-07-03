@@ -12,4 +12,12 @@ window.onload = () => {
 
         console.log(navOpenButton,navDrawer);
     })();
+
+    (() => {
+        document.getElementById('json-show-info').addEventListener('click', getJSONData);
+    })();
+}
+
+function getJSONData() {
+    console.log("werked!");
 }
