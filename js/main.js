@@ -9,15 +9,17 @@ window.onload = () => {
             navDrawer.classList.toggle('nav-active');
             navOpenButton.classList.toggle('nav-active');
         });
-
-        console.log(navOpenButton,navDrawer);
     })();
 
     (() => {
-        document.getElementById('json-show-info').addEventListener('click', getJSONData);
-    })();
-}
+        document.getElementById('json-show-info').addEventListener('click', () => {
+            const empData = require('../empdetails.json');
 
-function getJSONData() {
-    console.log("werked!");
+            console.table(empData);
+
+            empData.jsonstr.map((employee, index) => {
+                console.log(employee, index);
+            })
+        });
+    })();
 }

@@ -612,6 +612,57 @@ textarea {
       }
     }
   }
+  .table-wrapper {
+    table {
+      border-spacing: 5px;
+      font-family: $roboto-regular;
+    }
+    thead {
+      background: rgb(19, 55, 129);
+      color: rgb(207, 229, 236);
+      font-family: $roboto-condensed;
+    }
+    table,
+    th,
+    td {
+      border: 1px solid;
+      border-collapse: collapse;
+    }
+    th,
+    td {
+      padding: 15px;
+    }
+    th {
+      text-align: left;
+    }
+    tbody {
+      tr {
+        td {
+          font-size: 12px;
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+              margin: 0 0 5px 0;
+              padding: 0;
+              strong {
+                display: block;
+              }
+            }
+            &.company-details-list {
+              li {
+                display: block;
+                strong {
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 #home-minor-teasers {
