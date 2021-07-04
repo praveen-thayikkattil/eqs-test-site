@@ -433,7 +433,8 @@ textarea {
   }
 }
 
-#home-major-teasers {
+#home-major-teasers,
+#home-minor-teasers {
   border-top: 2px solid white;
   .teasers-list {
     display: flex;
@@ -509,6 +510,7 @@ textarea {
             padding: 5px 10px;
             transition: all 0.3s ease-out;
             cursor: pointer;
+            font-family: $roboto-regular;
             &:hover,
             &:focus,
             &:active {
@@ -613,19 +615,15 @@ textarea {
     }
   }
   .table-wrapper {
+    width: calc(100vw - 100px);
+    margin-top: 20px;
     table {
       border-spacing: 5px;
       font-family: $roboto-regular;
     }
-    thead {
-      background: rgb(19, 55, 129);
-      color: rgb(207, 229, 236);
-      font-family: $roboto-condensed;
-    }
     table,
     th,
     td {
-      border: 1px solid;
       border-collapse: collapse;
     }
     th,
@@ -635,10 +633,42 @@ textarea {
     th {
       text-align: left;
     }
+    thead {
+      background: rgb(19, 55, 129);
+      color: rgb(207, 229, 236);
+      font-family: $roboto-condensed;
+      tr {
+        th {
+          &:nth-of-type(1) {
+            width: 5%;
+          }
+          &:nth-of-type(2) {
+            width: 15%;
+          }
+          &:nth-of-type(3) {
+            width: 15%;
+          }
+          &:nth-of-type(4) {
+            width: 3%;
+          }
+          &:nth-of-type(5) {
+            width: 30%;
+          }
+          &:nth-of-type(6) {
+            width: 20%;
+          }
+        }
+        th {
+        }
+      }
+    }
     tbody {
       tr {
         td {
           font-size: 12px;
+          border-bottom: 2px solid rgb(248, 248, 249);
+          vertical-align: top;
+          color: rgb(149, 161, 188);
           ul {
             margin: 0;
             padding: 0;
@@ -646,8 +676,10 @@ textarea {
             li {
               margin: 0 0 5px 0;
               padding: 0;
+              color: rgb(145, 149, 153);
               strong {
                 display: block;
+                color: rgb(37, 44, 101);
               }
             }
             &.company-details-list {
