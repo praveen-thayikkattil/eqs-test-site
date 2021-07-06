@@ -1,4 +1,5 @@
 window.onload = () => {
+    /* Main navigation */
     (() => {
         let activeState = false;
 
@@ -11,6 +12,7 @@ window.onload = () => {
         });
     })();
 
+    /* JSON data based table */
     (() => {
         const button = document.getElementById('json-show-info');
         const table = document.getElementById('json-table');
@@ -53,7 +55,21 @@ window.onload = () => {
                                       <td>${companyDetails}</td>`;
                 
                 tbody.insertAdjacentHTML('beforeend', rowElementText)
-            })
+            });
         });
+    })();
+
+    (() => {
+        const scrollTopButton = document.getElementById('scroll-top-button');
+
+        scrollTopButton.addEventListener('click', e => {
+            console.log(e.target);
+
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            })
+        })
     })();
 }
