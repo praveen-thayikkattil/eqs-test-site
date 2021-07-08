@@ -16,16 +16,21 @@ window.onload = () => {
     (() => {
         const button = document.getElementById('json-show-info');
         const table = document.getElementById('json-table');
+        const thead = table.querySelector('thead');
         const tbody = table.querySelector('tbody');
-
-        
 
         button.addEventListener('click', (e) => {
             const empData = require('../empdetails.json');
 
+            // thead.style.display = 'block';
+            
+            // Is inactive
             if (button.innerHTML === "Show Information") {
                 button.innerHTML = "Hide Information";
-                table.style.display = 'block';
+                table.style.display = 'table';
+                thead.style.display = "table-header-group";
+
+                // Is active
             } else {
                 button.innerHTML = "Show Information";
                 table.style.display = 'none';
@@ -63,8 +68,6 @@ window.onload = () => {
         const scrollTopButton = document.getElementById('scroll-top-button');
 
         scrollTopButton.addEventListener('click', e => {
-            console.log(e.target);
-
             window.scroll({
                 top: 0,
                 left: 0,
